@@ -146,6 +146,32 @@ Chabi stores data in Electron `userData` directory:
 - `npm run dev` - Vite + Electron dev workflow
 - `npm run build` - Build renderer assets
 - `npm run start` - Start Electron app
+- `npm run dist` - Build local macOS `.dmg` + `.zip` into `release/`
+- `npm run release:ci` - CI release build + publish to GitHub Release
+
+## Release Standard
+### Local release build (manual)
+1. Bump version in `package.json` (for example `0.1.1`).
+2. Run:
+```bash
+npm install
+npm run dist
+```
+3. Release artifacts will be generated in `release/`.
+
+### GitHub release build (recommended)
+This repo has a workflow at `.github/workflows/release.yml` that runs on version tags.
+
+1. Commit your release changes.
+2. Create and push a tag:
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+3. GitHub Actions builds `.dmg` and `.zip` and uploads them to a draft GitHub Release.
+
+### Signing and notarization (later upgrade)
+Current setup is great for first public distribution. For trusted macOS install UX, add Apple signing/notarization in a later step.
 
 ## License
 Private project for now.

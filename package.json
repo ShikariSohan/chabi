@@ -2,12 +2,21 @@
   "name": "chabi",
   "private": true,
   "version": "0.1.0",
+  "description": "Glassy macOS menu bar launcher with shortcuts and quick bar",
+  "author": "Sohan",
   "type": "module",
   "main": "electron/main.cjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShikariSohan/chabi.git"
+  },
   "scripts": {
     "dev": "concurrently -k \"vite\" \"wait-on tcp:5173 && cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .\"",
     "build": "vite build",
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "npm run build && electron-builder --mac dmg zip --publish never",
+    "release:local": "npm run build && electron-builder --mac dmg zip --publish never",
+    "release:ci": "npm run build && electron-builder --mac dmg zip --publish always"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -18,7 +27,33 @@
     "concurrently": "^9.1.2",
     "cross-env": "^7.0.3",
     "electron": "^35.1.4",
+    "electron-builder": "^24.13.3",
     "vite": "^8.0.0",
     "wait-on": "^8.0.3"
+  },
+  "build": {
+    "appId": "com.shikarisohan.chabi",
+    "productName": "Chabi",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.productivity"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "ShikariSohan",
+      "repo": "chabi",
+      "releaseType": "draft"
+    }
   }
 }
