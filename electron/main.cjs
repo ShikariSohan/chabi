@@ -741,9 +741,14 @@ function createQuickBarWindow() {
 }
 
 function createTray() {
-  const image = nativeImage.createFromPath(path.join(__dirname, 'assets', 'trayTemplate.png'))
-  image.setTemplateImage(true)
-  tray = new Tray(image)
+  const rawImage = nativeImage.createFromPath(path.join(__dirname, 'assets', 'trayTemplate.png'))
+  const trayImage =
+    process.platform === 'darwin'
+      ? rawImage.resize({ width: 16, height: 16, quality: 'best' })
+      : rawImage
+
+  trayImage.setTemplateImage(true)
+  tray = new Tray(trayImage)
   tray.setToolTip('Chabi')
 
   tray.on('click', toggleWindow)
