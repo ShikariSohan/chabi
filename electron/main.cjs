@@ -15,6 +15,9 @@ const fs = require('fs')
 const { exec, execFile } = require('child_process')
 const { randomUUID } = require('crypto')
 
+// Ensure macOS menu bar app name is shown as Chabi (instead of Electron in dev).
+app.setName('Chabi')
+
 let tray = null
 let win = null
 let quickBarWin = null
