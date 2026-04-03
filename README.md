@@ -17,8 +17,8 @@ npm run dev
 
 ## Download
 - Latest release: [github.com/ShikariSohan/chabi/releases/latest](https://github.com/ShikariSohan/chabi/releases/latest)
-- DMG (`v0.1.0`): [Chabi-0.1.0-arm64.dmg](https://github.com/ShikariSohan/chabi/releases/download/v0.1.0/Chabi-0.1.0-arm64.dmg)
-- ZIP (`v0.1.0`): [Chabi-0.1.0-arm64-mac.zip](https://github.com/ShikariSohan/chabi/releases/download/v0.1.0/Chabi-0.1.0-arm64-mac.zip)
+- DMG (`v0.1.1`): [Chabi-0.1.1-arm64.dmg](https://github.com/ShikariSohan/chabi/releases/download/v0.1.1/Chabi-0.1.1-arm64.dmg)
+- ZIP (`v0.1.1`): [Chabi-0.1.1-arm64-mac.zip](https://github.com/ShikariSohan/chabi/releases/download/v0.1.1/Chabi-0.1.1-arm64-mac.zip)
 
 ## What You Can Do
 - Launch anything fast from the menu bar: websites, apps, shell commands, and system actions.

@@ -1,7 +1,7 @@
 {
   "name": "chabi",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Glassy macOS menu bar launcher with shortcuts and quick bar",
   "author": "Sohan",
   "type": "module",

@@ -10,7 +10,7 @@
 
 ## Versioning
 - SemVer (`MAJOR.MINOR.PATCH`)
-- Use tags like `v0.1.0`
+- Use tags like `v0.1.1`
 
 ## Practical Rule
 For each release:

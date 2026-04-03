@@ -12,8 +12,8 @@ Artifacts are generated in `release/`.
 2. Bump version in `package.json`.
 3. Tag and push:
 ```bash
-git tag v0.1.0
-git push origin v0.1.0
+git tag v0.1.1
+git push origin v0.1.1
 ```
 4. GitHub Actions workflow `.github/workflows/release.yml` builds `.dmg` + `.zip` and uploads to draft release.
 
